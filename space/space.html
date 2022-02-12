@@ -1,0 +1,75 @@
+ <!-- Jaz Boyce CSC102-->
+
+<!-- This tells the browser we are sending an HtmL document -->
+<!DOCTYPE html>
+
+<!-- Starts HTML document -->
+<html lang="en">
+
+<head>
+    <title>Jaz Boyce | UAT Mission Control</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="code.js"></script>
+</head>
+<body>
+    <!--This is a div tag that divides the pages into sections-->
+    <div class="full-height">
+        <div class="navigation">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="logo-toggle-container">
+                        <a href="../index.html">
+                            <img src="logo.png" alt="Jaz Boyce Github Logo">
+                        </a>
+                        <span class="toggle-box">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="space.html">SPACE</a></li>
+                        <li><a href="../boards/boards.html">BOARDS</a></li>
+                    </ul>
+                </nav>
+                <!--This is the body section-->
+                <main>
+                    <div>
+                        <img src="misson-control.png">
+                    </div><br>
+                    <h1>Welcome to Mission Control</h1><br>
+                    <p class="intromsg">Today we have a spaceship blastoff</p><br>
+                    <p class="intromsg">Please login to begin countdown</p>
+                    <div name="regForm" id="myRegForm">
+                        <form name="myForm">
+                            <p>
+                                <input type="text" size="20" name="fName" placeholder="first name" maxlength="9" class="textBox"> 
+                                <input type="text" size="20" name="lName" placeholder="last name" maxlength="10" class="textBox">
+                                <input type="text" size="5" name="bNum" placeholder="badge no" maxlength="3" class="textBox">
+                                <input type="button" value="Login" onclick="(formValidate())">
+                            </p>
+                        </form>
+                    </div><br>
+                    <div>
+                        <input type="button" onclick="startTheCountdown()" value="Start the Countdown">
+                    </div> 
+                    <!--These are the buttons that start and stop the countdown-->
+                    <div>
+                        <p id="registrationDisplay"></p><br>
+                        <p id="halfwayDisplay"></p>
+                        <p id="countdownDisplay"></p>
+                    </div>
+                    <div>
+                        <audio controls autoplay loop preload>
+                            <source src="LightYears.mp3" type="audio/mpeg">
+                            Your browser does not support the audio tag.
+                        </audio>        
+                    </div>
+                </main>
+            </div>      
+        </div>
+    </div>
+</body>
+<!-- Ends HTML document -->
+</html>
